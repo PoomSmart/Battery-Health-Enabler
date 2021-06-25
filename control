@@ -1,0 +1,11 @@
+Package: com.ps.batteryhealthenabler
+Name: Battery Health Enabler
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Enable Battery Health on unsupported devices.
+Maintainer: PoomSmart
+Author: PoomSmart
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 11.3)
+Depiction: https://poomsmart.github.io/repo/depictions/batteryhealthenabler.html
+SileoDepiction: https://poomsmart.github.io/repo/sileodepictions/batteryhealthenabler.json
