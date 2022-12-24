@@ -6,7 +6,6 @@
 + (NSString *)containerPath;
 @end
 
-// extern CFTypeRef MGCopyAnswer(CFStringRef key, CFDictionaryRef options);
 extern CFPropertyListRef _CFPreferencesCopyValueWithContainer(CFStringRef key, CFStringRef applicationID, CFStringRef userName, CFStringRef hostName, CFStringRef containerPath);
 
 static NSString *BatteryUILocalization(Class BUIR, NSString *key) {
@@ -57,8 +56,6 @@ static NSString *BatteryUILocalization(Class BUIR, NSString *key) {
 - (NSMutableArray <PSSpecifier *> *)smartChargingGroupSpecifier {
     NSMutableArray <PSSpecifier *> *specifiers = %orig;
     PSSpecifier *specifier = [specifiers lastObject];
-    // NSString *footerText = [specifier propertyForKey:PSFooterTextGroupKey];
-    // [specifier setProperty:[footerText stringByReplacingOccurrencesOfString:@"iPhone" withString:(__bridge NSString *)MGCopyAnswer(CFSTR("GSDeviceName"), NULL)] forKey:PSFooterTextGroupKey];
     // You can't toggle Optimized Battery Charging on non-iPhone anyway
     [specifier setProperty:@NO forKey:PSEnabledKey];
     return specifiers;
