@@ -1,5 +1,4 @@
-export PREFIX = $(THEOS)/toolchain/Xcode11.xctoolchain/usr/bin/
-TARGET := iphone:clang:latest:11.0
+TARGET = iphone:clang:15.5:11.0
 PACKAGE_VERSION = 1.0.0
 INSTALL_TARGET_PROCESSES = Preferences
 
