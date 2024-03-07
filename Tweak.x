@@ -14,6 +14,26 @@ static NSString *BatteryUILocalization(Class BUIR, NSString *key) {
 
 %group Hooks
 
+%hook PLBatteryUIBackendModel
+
++ (bool)supportsChargingFixedLimit {
+    return false;
+}
+
++ (bool)shouldShowChargingController {
+    return true;
+}
+
+%end
+
+%hook PLModelingUtilities
+
++ (bool)isPhone {
+    return true;
+}
+
+%end
+
 %hook BatteryUIResourceClass
 
 // iPhone's is 4
